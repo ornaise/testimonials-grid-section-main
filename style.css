@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+  body {
+    min-height: 100vh;
+    background-color: #edf2f8;
+    background-size: 10px 10px;
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 200;
+    justify-content: center;
+    align-items: center;
+ }
+
+.container{
+    display: grid;
+    grid-template-areas: 'a a b c'
+                         'd e e c';
+    padding: 7vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-auto-flow: row;
+    gap:2.5em;
+    max-width: 1462px;
+    margin: auto;
+  
+}
+.card-info{
+    border-radius: 10px;
+    box-shadow: 0px 10px 44px -16px hsl(0, 0%, 81%);
+    padding: 2.5em;
+}
+.card-info_info1{
+    font-size: 16px;
+    grid-area: a;
+    background-color: hsl(263, 55%, 52%);
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 81%;
+}
+.card-info_info2{
+    grid-area: b;
+    background-color: hsl(217, 19%, 35%);
+}
+.card-info_info3{
+    grid-area: d;
+    background-color:  hsl(0, 0%, 100%);
+}
+.card-info_info4{
+    grid-area: e;
+    background-color:hsl(219, 29%, 14%) ;
+}
+.card-info_info5{
+    grid-area: c;
+    background-color:  hsl(0, 0%, 100%);
+   
+}
+.nom{
+    padding: 0%;
+    margin: 0.5em 0 0 0;
+    font-size: 1vw;
+    font-weight: 500;
+    color: black;
+}
+.verifier{
+    margin-top: auto;
+    opacity: 50%;
+}
+
+.photo {
+    border-radius: 100%;
+    width: 3vw;
+    float: left;
+    margin-right: 1.5em;
+    border: 1px solid;
+}
+.txt-info{
+    font-size: 26px;
+    line-height: 1.25em;
+}
+
+.whiteText{
+    color:white;
+}
+
+.darkText{
+    color:#333;
+}
+
+.pararaphe{
+    opacity: 70%;
+    line-height: 1.5;
+    font-size: 16px;
+}
+.attribution {
+     font-size: 11px;
+    text-align: center;
+      
+}
+.attribution a { 
+        color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width:1337px ) {
+    .container{
+        grid-template-areas: 'a' 'b' 'd' 'e''c';
+        grid-template-columns: 1fr;
+    }
+}
